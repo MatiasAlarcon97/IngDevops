@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="./pagPrincipal.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tienda Pokémon</h1>
+        <p>¡Compra tus cartas favoritas!</p>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#carrito">Carrito</a>
+    </nav>
+    <section id="productos" class="productos">
+        <div class="producto">
+        <h3>Pikachu</h3>
+        <p>$5.000</p>
+        <button onclick="agregarAlCarrito('Pikachu', 5000)">Agregar</button>
+    </div>
+    <div class="producto">
+        <h3>Charizard</h3>
+        <p>$10.000</p>
+        <button onclick="agregarAlCarrito('Charizard', 10000)">Agregar</button>
+    </div>
+    <div class="producto">
+        <h3>Mewtwo</h3>
+        <p>$8.000</p>
+        <button onclick="agregarAlCarrito('Mewtwo', 8000)">Agregar</button>
+    </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p><strong>Total: $<span id="total">0</span></strong></p>
+    </section>
+    </main>
+    <footer>
+        &copy; 2025 Tienda Pokémon
+    </footer>
+</body>
+</html>
