@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservicio
+  labels:
+    app: microservicio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservicio
+  template:
+    metadata:
+      labels:
+        app: microservicio
+    spec:
+      imagePullSecrets:
+      - name: ghcr-secret
+      containers:
+      - name: microservicio
+        image: ghcr.io/matiasalarcon97/microservicio:latest
+        ports:
+        - containerPort: 5000
